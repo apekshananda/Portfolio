@@ -1,0 +1,54 @@
+@import 'tailwindcss';
+
+/* Premium Custom Text Selection Styling */
+::selection {
+  background-color: rgba(59, 130, 246, 0.3); /* Translucent Blue selection accent to match your glow */
+  color: #ffffff;
+}
+
+html {
+  min-width: 360px;
+  scroll-behavior: smooth;
+  
+  /* FIXED: Changed to your deep space dark background color */
+  background-color: #0B0D12; 
+}
+
+body {
+  /* FIXED: Changed to soft slate text color for perfect dark-mode contrast */
+  color: #e2e8f0; 
+  
+  /* REMOVED: Light mode grid overlay fields and image masks so your layout glow can shine */
+  background-image: none;
+  mask-image: none;
+  -webkit-mask-image: none;
+}
+
+/* Clear Safari's default input styling shadows on mobile devices */
+input[type='text'],
+input[type='email'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Title text wrapping optimization */
+.title {
+  text-wrap: balance;
+}
+
+/* Modern staggered layout slide animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
